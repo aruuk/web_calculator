@@ -47,6 +47,15 @@ public class CalculatorServlet extends HttpServlet {
                             result = number1 / number2;
                         }
                         break;
+                    case "square":
+                        result = Math.pow(number1, number2);
+                        break;
+                    case "root":
+                        result = (int) Math.pow(number1, 1/number2);
+                        break;
+                    case "procents":
+                        result = (number1/100)*number2;
+                        break;
                     default:
                         errorMessage = "Неподдерживаемая операция.";
                         isValid = false;
